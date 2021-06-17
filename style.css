@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--dark: #252525;
+	--light: #ccc;
+	--dark-darker: #1d1d1d;
+	--light-lighter: #fff;
+	/* Accent for dark mode */
+	--dark-accent: mediumslateblue;
+	--dark-accent-darker: rgb(102, 85, 194);
+	--dark-accent-lighter: rgb(147, 131, 240);
+	/* Accent for light mode */
+	--light-accent: mediumslateblue;
+	--light-accent-darker: rgb(102, 85, 194);
+	--light-accent-lighter: rgb(147, 131, 240);
+
+	/* transition times */
+	--trans-time: 0.25s;
+}
+
+body {
+	font-family: 'Muli', sans-serif;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden; */
+	/* height: 100vh; */
+	overflow-x: hidden;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; */
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+}
+
+.container {
+	width: 80%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100%;
+	width: 100%;
+	/* overflow: hidden; */
+	margin: 5rem 0;
+	padding: 0 1rem;
+}
+
+#theme {
+	transition: all var(--trans-time) ease;
+}
+
+#theme.dark-theme {
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+#theme.light-theme {
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+.theme-changer {
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all var(--trans-time) ease;
+}
+
+.dark-theme .theme-changer {
+	background-color: var(--light);
+}
+
+.light-theme .theme-changer {
+	background-color: var(--dark);
+}
+
+.header {
+	width: 100%;
+	/* position: absolute;
+	top: 0;
+	left: 0; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	/* margin-top: 20rem; */
+	transition: all var(--trans-time) ease;
+}
+.header-image {
+	background-image: url('./images/dp.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* border-radius: 10rem; */
+	/* background: transparent; */
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(50%, -50%);
+}
+.header-text-content {
+	text-align: left;
+	margin: 0 1rem 0 0;
+}
+
+.dark-theme .header-image {
+	box-shadow: inset 0 0 5px 0px var(--light);
+}
+
+.light-theme .header-image {
+	box-shadow: inset 0 0 5px 0px var(--dark);
+}
+
+.dark-theme .header {
+	background-color: var(--dark-darker);
+}
+
+.light-theme .header {
+	background-color: var(--light-lighter);
+}
+
+.contents {
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.contents .section {
+	padding: 1rem;
+	margin-bottom: 5rem;
+}
+
+.contents .education {
+	width: 59%;
+}
+
+.contents .skills {
+	width: 39%;
+}
+
+.dark-theme .contents .section {
+	background-color: var(--dark-darker);
+}
+
+.light-theme .contents .section {
+	background-color: var(--light-lighter);
+}
+
+.dark-theme .contents .section hr {
+	border: none;
+	border-bottom: 0.1rem solid var(--dark);
+	/* background-color: var(--dark-darker); */
+}
+
+.light-theme .contents .section hr {
+	border: none;
+	border-bottom: 0.1rem solid var(--light);
+	/* background-color: var(--dark-darker); */
+}
+
+.badge {
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	font-weight: bold;
+	margin: 0.25rem;
+	color: var(--light-lighter);
+}
+
+.dark-theme .badge {
+	background-color: var(--dark-accent);
+}
+
+.light-theme .badge {
+	background-color: var(--light-accent);
+}
+
+.badges-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: center;
+	justify-content: flex-start;
+}
+
+.dark-theme .sub-education p {
+	color: var(--dark-accent-lighter);
+}
+
+.light-theme .sub-education p {
+	color: var(--light-accent-darker);
+}
+
+@media screen and (max-width: 940px) {
+	main {
+		margin-top: 10rem;
+	}
+	.container {
+		width: 100%;
+	}
+	.header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.header-text-content {
+		text-align: center;
+		margin: 5rem 0 0;
+	}
+	.header-image {
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.contents .education {
+		width: 100%;
+	}
+
+	.contents .skills {
+		width: 100%;
+	}
+}
