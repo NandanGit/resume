@@ -38,6 +38,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	margin: 0;
+	background-color: var(--light);
 }
 
 .container {
@@ -138,25 +139,42 @@ main {
 
 .contents {
 	margin-top: 5rem;
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: flex-start; */
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	/* grid-auto-rows: minmax(20rem); */
+	/* grid-column-gap: 1rem;
+	grid-row-gap: 1rem; */
+	gap: 1rem;
+	margin-bottom: 2rem;
 }
 
 .contents .section {
 	padding: 1rem;
-	margin-bottom: 2.5rem;
+	/* margin-bottom: 2.5rem; */
 }
 
 .contents .education {
-	width: 59%;
+	/* width: 59%; */
+	grid-column: 1/3;
 }
 
 .contents .skills {
-	width: 39%;
+	/* width: 39%; */
+	grid-column: 3/6;
+}
+
+.contents .projects {
+	grid-column: 1/4;
+}
+
+.contents .contact {
+	grid-column: 4/6;
 }
 
 .dark-theme .contents .section {
@@ -195,6 +213,15 @@ main {
 	background-color: var(--light-accent);
 }
 
+.badge a {
+	text-decoration: none;
+	color: var(--light-lighter);
+}
+
+.badge .icon {
+	margin-right: 0.1rem;
+}
+
 .badges-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -209,6 +236,57 @@ main {
 
 .light-theme .sub-education p {
 	color: var(--light-accent-darker);
+}
+
+.dark-theme .sub-project p {
+	color: var(--dark-accent-lighter);
+}
+
+.light-theme .sub-project p {
+	color: var(--light-accent-darker);
+}
+
+.sub-contact a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	color: inherit;
+}
+
+.sub-education a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* .dark-theme .sub-contact a {
+	color: var(--light-lighter);
+}
+
+.light-theme .sub-contact a {
+	color: var(--dark);
+} */
+
+.contact-icon {
+	font-size: 2.5rem;
+	margin-right: 1rem;
+}
+
+.linkedin-icon {
+	color: #0a66c2;
+}
+
+.instagram-icon {
+	color: #f09433;
+}
+
+.hackerrank-icon {
+	color: #2ec866;
+}
+
+.resume-link {
+	text-decoration: none;
+	color: inherit;
 }
 
 @media screen and (max-width: 940px) {
@@ -233,11 +311,16 @@ main {
 		transform: translate(-50%, -50%);
 	}
 
-	.contents .education {
-		width: 100%;
+	.contents {
+		display: flex;
+		flex-direction: column;
+		/* flex-wrap: wrap; */
+		align-content: center;
+		justify-content: space-between;
+		align-items: flex-start;
 	}
 
-	.contents .skills {
+	.section {
 		width: 100%;
 	}
 }
