@@ -324,3 +324,26 @@ main {
 		width: 100%;
 	}
 }
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #555;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #bbb;
+}
