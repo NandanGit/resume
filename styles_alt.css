@@ -335,15 +335,15 @@ main {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #555;
+	background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #888;
+	background: #333;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #bbb;
+	background: #444;
 }
