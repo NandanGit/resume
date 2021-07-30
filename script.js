@@ -63,13 +63,17 @@ const Logic = (function () {
 				return validationResult;
 			},
 			sendMessage(messageObj) {
-				console.log(messageObj);
+				// console.log(messageObj);
+				const stringifiedMessage = new URLSearchParams(
+					messageObj
+				).toString();
+				console.log(stringifiedMessage);
 				fetch('/', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/x-www-form-urlencoded',
 					},
-					body: new URLSearchParams(messageObj).toString(),
+					body: stringifiedMessage,
 				})
 					.then(() => console.log('Form successfully submitted'))
 					.catch((error) => alert(error));
@@ -96,5 +100,5 @@ DOM.messageForm.addEventListener('submit', (event) => {
 		return console.log(errors);
 	}
 	Logic.messageForm.sendMessage(formData);
-	console.log(formData);
+	// console.log(formData);
 });
