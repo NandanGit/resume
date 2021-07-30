@@ -29,6 +29,41 @@
 					</div>
 				</header>
 				<div class="contents">
+					<div class="section message-me">
+						<h2>Leave a message</h2>
+						<hr />
+						<form
+							id="message-form"
+							name="Messages from Resume"
+							method="POST"
+							data-netlify="true"
+						>
+							<div
+								class="form-control input-control active-input"
+							>
+								<!-- <label>Name</label> -->
+								<span>Name</span>
+								<input name="name" type="text" />
+							</div>
+							<div
+								class="form-control input-control active-input"
+							>
+								<!-- <label>Email</label> -->
+								<span>Email</span>
+								<input name="email" type="email" />
+							</div>
+							<div
+								class="form-control input-control active-input"
+							>
+								<!-- <label>Message</label> -->
+								<span>Message</span>
+								<textarea name="message" rows="5"></textarea>
+							</div>
+							<button class="badge" type="submit">
+								Send Message
+							</button>
+						</form>
+					</div>
 					<div class="section education">
 						<h2>Education</h2>
 						<div class="sub-education">
@@ -141,7 +176,8 @@
 							<hr />
 							<h4>Recipe Search App</h4>
 							<p>
-								Frontend of a recipe searching application built with
+								Frontend of a recipe searching application built
+								with
 								<b>React.js</b> and uses 3rd party api
 							</p>
 							<div class="badges-container">
