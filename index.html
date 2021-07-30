@@ -34,10 +34,15 @@
 						<hr />
 						<form
 							id="message-form"
-							name="messages-from-resume"
+							name="Messages from Resume"
 							method="POST"
 							data-netlify="true"
 						>
+							<input
+								type="hidden"
+								name="form-name"
+								value="Messages from Resume"
+							/>
 							<div
 								class="form-control input-control active-input"
 							>
@@ -59,7 +64,7 @@
 								<span>Message</span>
 								<textarea name="message" rows="5"></textarea>
 							</div>
-							<div data-netlify-recaptcha="true"></div>
+							<!-- <div data-netlify-recaptcha="true"></div> -->
 							<button class="badge" type="submit">
 								Send Message
 							</button>
