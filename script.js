@@ -88,17 +88,17 @@ DOM.themeChangerButtonElement.addEventListener('click', (event) => {
 	UI.switchTheme();
 });
 
-// DOM.messageForm.addEventListener('submit', (event) => {
-// 	event.preventDefault();
-// 	const {
-// 		isValid: isFormValid,
-// 		errors,
-// 		formattedFormData: formData,
-// 	} = Logic.messageForm.validate();
+DOM.messageForm.addEventListener('submit', (event) => {
+	event.preventDefault();
+	const {
+		isValid: isFormValid,
+		errors,
+		formattedFormData: formData,
+	} = Logic.messageForm.validate();
 
-// 	if (!isFormValid) {
-// 		return console.log(errors);
-// 	}
-// 	Logic.messageForm.sendMessage(formData);
-// 	// console.log(formData);
-// });
+	if (!isFormValid) {
+		return console.log(errors);
+	}
+	Logic.messageForm.sendMessage(formData);
+	// console.log(formData);
+});
