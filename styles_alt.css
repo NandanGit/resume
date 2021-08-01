@@ -78,7 +78,7 @@ main {
 .theme-changer {
 	width: 2rem;
 	height: 2rem;
-	position: absolute;
+	position: fixed;
 	top: 1rem;
 	right: 1rem;
 	border-radius: 50%;
@@ -183,6 +183,10 @@ main {
 
 .contents .message-me {
 	grid-column: 1/6;
+}
+
+.contents .message-me > h1 {
+	margin: 0.5rem 0 1rem;
 }
 
 .dark-theme .contents .section {
@@ -315,9 +319,17 @@ main {
 
 #message-form .form-control input {
 	width: 100%;
+	font-size: 1rem;
+}
+
+.dark-theme #message-form .form-control input {
 	background: var(--dark);
 	color: var(--light);
-	font-size: 1rem;
+}
+
+.light-theme #message-form .form-control input {
+	background: var(--light);
+	color: var(--dark);
 }
 
 #message-form .form-control input:focus ~ label {
@@ -336,11 +348,19 @@ main {
 
 #message-form .form-control textarea {
 	width: 100%;
-	background: var(--dark);
-	color: var(--light);
 	font-size: 1.2rem;
 
 	resize: vertical;
+}
+
+.dark-theme #message-form .form-control textarea {
+	background: var(--dark);
+	color: var(--light);
+}
+
+.light-theme #message-form .form-control textarea {
+	background: var(--light);
+	color: var(--dark);
 }
 
 #message-form button[type='submit'] {
@@ -365,9 +385,17 @@ main {
 	top: -1.2rem;
 	left: 0;
 	padding: 0.2rem 0.5rem;
+	border-radius: 0.5rem;
+}
+
+.dark-theme .form-control.input-control.active-input span {
 	background-color: var(--dark);
 	color: var(--dark-accent);
-	border-radius: 0.5rem;
+}
+
+.light-theme .form-control.input-control.active-input span {
+	background-color: var(--light);
+	color: var(--light-accent);
 }
 
 .resume-link {

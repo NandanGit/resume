@@ -4,6 +4,11 @@ const DOM = {
 	themeChangerButtonElement: getElem('theme-changer'),
 	themeContainer: getElem('theme'),
 	messageForm: getElem('message-form'),
+	messageFormElements: {
+		nameField: getElem('message-form__name'),
+		emailField: getElem('message-form__email'),
+		messageField: getElem('message-form__message'),
+	},
 };
 
 ///////////////////////////////////// UI Methods /////////////////////////////////////
@@ -87,6 +92,24 @@ DOM.themeChangerButtonElement.addEventListener('click', (event) => {
 	// console.log('Clicked');
 	UI.switchTheme();
 });
+
+(function () {
+	const inputElements = Object.values(DOM.messageFormElements);
+	console.log(inputElements);
+	inputElements.forEach((inputElement) => {
+		inputElement.addEventListener('focus', (event) => {
+			// console.log(event.target.value);
+			event.target.closest('.form-control').classList.add('active-input');
+		});
+		inputElement.addEventListener('blur', (event) => {
+			if (!event.target.value.trim()) {
+				event.target
+					.closest('.form-control')
+					.classList.remove('active-input');
+			}
+		});
+	});
+})();
 
 // DOM.messageForm.addEventListener('submit', (event) => {
 // 	event.preventDefault();

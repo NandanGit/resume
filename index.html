@@ -29,51 +29,6 @@
 					</div>
 				</header>
 				<div class="contents">
-					<div class="section message-me">
-						<h2>Leave a message</h2>
-						<hr />
-						<form
-							id="message-form"
-							name="Messages from Resume"
-							method="POST"
-							data-netlify="true"
-						>
-							<input
-								type="hidden"
-								name="form-name"
-								value="Messages from Resume"
-							/>
-							<div
-								class="form-control input-control active-input"
-							>
-								<!-- <label>Name</label> -->
-								<span>Name</span>
-								<input name="name" type="text" required />
-							</div>
-							<div
-								class="form-control input-control active-input"
-							>
-								<!-- <label>Email</label> -->
-								<span>Email</span>
-								<input name="email" type="email" required />
-							</div>
-							<div
-								class="form-control input-control active-input"
-							>
-								<!-- <label>Message</label> -->
-								<span>Message</span>
-								<textarea
-									name="message"
-									rows="5"
-									required
-								></textarea>
-							</div>
-							<!-- <div data-netlify-recaptcha="true"></div> -->
-							<button class="badge" type="submit">
-								Send Message
-							</button>
-						</form>
-					</div>
 					<div class="section education">
 						<h2>Education</h2>
 						<div class="sub-education">
@@ -320,6 +275,57 @@
 								@i.am.nandan</a
 							>
 						</div> -->
+					</div>
+					<div class="section message-me">
+						<h1>Leave a message</h1>
+						<hr />
+						<form
+							id="message-form"
+							name="Messages from Resume"
+							method="POST"
+							data-netlify="true"
+						>
+							<input
+								type="hidden"
+								name="form-name"
+								value="Messages from Resume"
+							/>
+							<div class="form-control input-control">
+								<!-- <label>Name</label> -->
+								<span>Name</span>
+								<input
+									id="message-form__name"
+									name="name"
+									type="text"
+									autocomplete="nope"
+									required
+								/>
+							</div>
+							<div class="form-control input-control">
+								<!-- <label>Email</label> -->
+								<span>Email</span>
+								<input
+									id="message-form__email"
+									name="email"
+									type="email"
+									required
+								/>
+							</div>
+							<div class="form-control input-control">
+								<!-- <label>Message</label> -->
+								<span>Message</span>
+								<textarea
+									id="message-form__message"
+									name="message"
+									rows="5"
+									required
+								></textarea>
+							</div>
+							<!-- <div data-netlify-recaptcha="true"></div> -->
+							<button class="badge" type="submit">
+								Send Message
+							</button>
+						</form>
 					</div>
 				</div>
 				<p>
