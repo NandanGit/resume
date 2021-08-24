@@ -9,6 +9,13 @@ const DOM = {
 		emailField: getElem('message-form__email'),
 		messageField: getElem('message-form__message'),
 	},
+	sections: {
+		education: getElem('education'),
+		skills: getElem('skills'),
+		projects: getElem('projects'),
+		contact: getElem('contact'),
+		messageMe: getElem('message-me'),
+	},
 };
 
 ///////////////////////////////////// UI Methods /////////////////////////////////////
@@ -18,6 +25,57 @@ const UI = (function () {
 			const target = DOM.themeContainer;
 			target.classList.toggle('dark-theme');
 			target.classList.toggle('light-theme');
+		},
+		forceLightTheme() {
+			const target = DOM.themeContainer;
+			target.classList.remove('dark-theme');
+			target.classList.add('light-theme');
+		},
+		updateEducation(education) {
+			let finalHTML = '<h2>Education</h2>';
+			education.forEach(({ title, qualification, score }) => {
+				finalHTML += `<div class="sub-education">
+							<hr />
+							<h4>${title}</h4>
+							<div class="qualification">
+								<p>${qualification}</p>
+								<p>${score}</p>
+							</div>
+						</div>`;
+			});
+			finalHTML = finalHTML.replace(/\n/g, '').replace(/\t/g, '');
+			DOM.sections.education.innerHTML = finalHTML;
+		},
+		updateSkills(skills) {
+			let finalHTML = '<h2>Skills</h2>';
+			skills.forEach(({ skillSet, subSkills }) => {
+				finalHTML += `<div class="sub-skills">
+							<hr />
+							<h4>${skillSet}</h4>
+							<div class="programming-languages badges-container">
+								${subSkills.map((skill) => '<span class="badge">' + skill + '</span>').join('')}
+							</div>
+						</div>`;
+			});
+			finalHTML = finalHTML.replace(/\n/g, '').replace(/\t/g, '');
+			DOM.sections.skills.innerHTML = finalHTML;
+		},
+		updateProjects(projects) {
+			let finalHTML = '<h2>Projects</h2>';
+			projects.forEach(
+				({ title, description, sourceCodeUrl, appUrl }) => {
+					finalHTML += `<div class="sub-project"> <hr /> <h4>${title}</h4> <p> ${description} </p> <div class="badges-container"> <span class="badge" ><a target="_blank" href="${sourceCodeUrl}" ><i class="fab fa-github icon"></i> See Code</a ></span > <span class="badge" ><a target="_blank" href="${appUrl}" >Try App</a ></span > </div> </div>`;
+				}
+			);
+			finalHTML = finalHTML.replace(/\n/g, '').replace(/\t/g, '');
+			DOM.sections.projects.innerHTML = finalHTML;
+		},
+		resumeMode() {
+			document.querySelector('html').style.backgroundColor =
+				'var(--light)';
+			this.forceLightTheme();
+			DOM.themeChangerButtonElement.style.display = 'none';
+			DOM.sections.messageMe.style.display = 'none';
 		},
 	};
 })();
@@ -35,6 +93,12 @@ const Utilities = (function () {
 
 const Logic = (function () {
 	return {
+		init() {
+			// Populate the Sections
+			UI.updateEducation(Details.education);
+			UI.updateSkills(Details.skills);
+			UI.updateProjects(Details.projects);
+		},
 		messageForm: {
 			validate() {
 				const errors = [];
@@ -111,17 +175,5 @@ DOM.themeChangerButtonElement.addEventListener('click', (event) => {
 	});
 })();
 
-// DOM.messageForm.addEventListener('submit', (event) => {
-// 	event.preventDefault();
-// 	const {
-// 		isValid: isFormValid,
-// 		errors,
-// 		formattedFormData: formData,
-// 	} = Logic.messageForm.validate();
-
-// 	if (!isFormValid) {
-// 		return console.log(errors);
-// 	}
-// 	Logic.messageForm.sendMessage(formData);
-// 	// console.log(formData);
-// });
+// Initialize
+Logic.init();
