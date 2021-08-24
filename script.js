@@ -31,6 +31,11 @@ const UI = (function () {
 			target.classList.remove('dark-theme');
 			target.classList.add('light-theme');
 		},
+		forceDarkTheme() {
+			const target = DOM.themeContainer;
+			target.classList.add('dark-theme');
+			target.classList.remove('light-theme');
+		},
 		updateEducation(education) {
 			let finalHTML = '<h2>Education</h2>';
 			education.forEach(({ title, qualification, score }) => {
@@ -70,10 +75,18 @@ const UI = (function () {
 			finalHTML = finalHTML.replace(/\n/g, '').replace(/\t/g, '');
 			DOM.sections.projects.innerHTML = finalHTML;
 		},
-		resumeMode() {
-			document.querySelector('html').style.backgroundColor =
-				'var(--light)';
-			this.forceLightTheme();
+		resumeMode(mode = 'light') {
+			if (mode !== 'light' && mode !== 'dark') {
+				return;
+			}
+			document.querySelector(
+				'html'
+			).style.backgroundColor = `var(--${mode})`;
+			if (mode === 'light') {
+				this.forceLightTheme();
+			} else {
+				this.forceDarkTheme();
+			}
 			DOM.themeChangerButtonElement.style.display = 'none';
 			DOM.sections.messageMe.style.display = 'none';
 		},
