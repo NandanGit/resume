@@ -242,6 +242,19 @@ main {
 	justify-content: flex-start;
 }
 
+.sub-skills h4 {
+	margin-bottom: 0.5rem;
+}
+
+.sub-education .qualification {
+	display: flex;
+	justify-content: space-between;
+}
+
+.qualification p {
+	margin-top: 0;
+}
+
 .dark-theme .sub-education p {
 	color: var(--dark-accent-lighter);
 }
