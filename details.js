@@ -87,13 +87,6 @@ const Details = {
 			appUrl: 'https://piano.nandanreddy.tech/',
 		},
 		{
-			title: 'Multiple iframes',
-			description:
-				'A webpage that creates multiple instances of the same app (useful for testing)',
-			sourceCodeUrl: 'https://github.com/NandanGit/multiple-iframes',
-			appUrl: 'https://nandangit.github.io/multiple-iframes/',
-		},
-		{
 			title: 'Recipe Now',
 			description: `Frontend of a recipe searching application built
 								with 
@@ -101,5 +94,12 @@ const Details = {
 			sourceCodeUrl: 'https://github.com/NandanGit/recipe-now',
 			appUrl: 'https://nandangit.github.io/recipe-now/',
 		},
+		{
+			title: 'Chatting App',
+			description:
+				'A FullStack Chat application which makes use of Node.js, Express.js, Websockets (socket.io), MongoDB with mongoose and React.js ',
+			sourceCodeUrl: 'https://github.com/NandanGit/chatterbox-v2',
+			appUrl: 'https://chatterbox.nandanreddy.tech',
+		}
 	],
 };
