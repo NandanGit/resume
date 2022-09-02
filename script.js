@@ -37,7 +37,7 @@ const UI = (function () {
 			target.classList.remove('light-theme');
 		},
 		updateEducation(education) {
-			let finalHTML = '<h2>Education</h2>';
+			let finalHTML = '<h2>Education & Employment</h2>';
 			education.forEach(({ title, qualification, score }) => {
 				finalHTML += `<div class="sub-education">
 							<hr />
@@ -67,11 +67,9 @@ const UI = (function () {
 		},
 		updateProjects(projects) {
 			let finalHTML = '<h2>Projects</h2>';
-			projects.forEach(
-				({ title, description, sourceCodeUrl, appUrl }) => {
-					finalHTML += `<div class="sub-project"> <hr /> <h4>${title}</h4> <p> ${description} </p> <div class="badges-container"> <span class="badge" ><a target="_blank" href="${sourceCodeUrl}" ><i class="fab fa-github icon"></i> See Code</a ></span > <span class="badge" ><a target="_blank" href="${appUrl}" >Try App</a ></span > </div> </div>`;
-				}
-			);
+			projects.forEach(({ title, description, sourceCodeUrl, appUrl }) => {
+				finalHTML += `<div class="sub-project"> <hr /> <h4>${title}</h4> <p> ${description} </p> <div class="badges-container"> <span class="badge" ><a target="_blank" href="${sourceCodeUrl}" ><i class="fab fa-github icon"></i> See Code</a ></span > <span class="badge" ><a target="_blank" href="${appUrl}" >Try App</a ></span > </div> </div>`;
+			});
 			finalHTML = finalHTML.replace(/\n/g, '').replace(/\t/g, '');
 			DOM.sections.projects.innerHTML = finalHTML;
 		},
@@ -79,9 +77,7 @@ const UI = (function () {
 			if (mode !== 'light' && mode !== 'dark') {
 				return;
 			}
-			document.querySelector(
-				'html'
-			).style.backgroundColor = `var(--${mode})`;
+			document.querySelector('html').style.backgroundColor = `var(--${mode})`;
 			if (mode === 'light') {
 				this.forceLightTheme();
 			} else {
@@ -146,9 +142,7 @@ const Logic = (function () {
 			},
 			sendMessage(messageObj) {
 				// console.log(messageObj);
-				const stringifiedMessage = new URLSearchParams(
-					messageObj
-				).toString();
+				const stringifiedMessage = new URLSearchParams(messageObj).toString();
 				console.log(stringifiedMessage);
 				fetch('/', {
 					method: 'POST',
@@ -180,9 +174,7 @@ DOM.themeChangerButtonElement.addEventListener('click', (event) => {
 		});
 		inputElement.addEventListener('blur', (event) => {
 			if (!event.target.value.trim()) {
-				event.target
-					.closest('.form-control')
-					.classList.remove('active-input');
+				event.target.closest('.form-control').classList.remove('active-input');
 			}
 		});
 	});

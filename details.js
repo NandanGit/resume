@@ -1,20 +1,16 @@
 const Details = {
 	education: [
 		{
+			title: 'Current',
+			qualification: 'Infosys',
+			score: 'July 2022 - Present',
+		},
+		{
 			title: 'Highest Qualification',
-			qualification: 'Intermediate',
-			score: 'Marks: 951/1000',
+			qualification: 'B.Tech',
+			score: 'CGPA: 7.89',
 		},
-		{
-			title: 'Current Education',
-			qualification: 'BTech',
-			score: 'CGPA: 8.4',
-		},
-		{
-			title: 'Semester',
-			qualification: '6th Semester',
-			score: '',
-		},
+
 		{
 			title: 'Specialization',
 			qualification: 'Electronics and Communication',
@@ -28,6 +24,11 @@ const Details = {
 										>Institute of Aeronautical Engineering</a
 									>`,
 			score: '',
+		},
+		{
+			title: 'Intermediate',
+			qualification: 'M.P.C',
+			score: 'Percentage: 95%',
 		},
 		{
 			title: 'Schooling',

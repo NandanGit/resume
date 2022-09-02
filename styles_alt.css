@@ -107,7 +107,7 @@ main {
 	transition: all var(--trans-time) ease;
 }
 .header-image {
-	background-image: url('./images/dp_alt.jpg');
+	background-image: url('./images/dp_alt.jpeg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
