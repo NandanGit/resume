@@ -100,6 +100,6 @@ const Details = {
 				'A FullStack Chat application which makes use of Node.js, Express.js, Websockets (socket.io), MongoDB with mongoose and React.js ',
 			sourceCodeUrl: 'https://github.com/NandanGit/chatterbox-v2',
 			appUrl: 'https://chatterbox.nandanreddy.tech',
-		}
+		},
 	],
 };
