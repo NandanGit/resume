@@ -43,11 +43,7 @@ const Details = {
 		},
 		{
 			skillSet: 'Computer science concepts',
-			subSkills: [
-				'Data structures',
-				'Algorithms',
-				'Object Oriented Programming',
-			],
+			subSkills: ['Data structures', 'Object Oriented Programming'],
 		},
 		{
 			skillSet: 'Web technologies',
@@ -58,7 +54,7 @@ const Details = {
 				'React.js',
 				'Node.js',
 				'Express.js',
-				'Socket.io',
+				'Socket.io (Basics)',
 			],
 		},
 		{
@@ -66,16 +62,12 @@ const Details = {
 			subSkills: ['MongoDB', 'Mongoose'],
 		},
 		{
-			skillSet: 'Version control',
-			subSkills: ['Git and GitHub'],
+			skillSet: 'Tools',
+			subSkills: ['Git', 'GitHub', 'VS Code', 'Postman'],
 		},
 		{
 			skillSet: 'Natural Languages',
-			subSkills: [
-				'Telugu (Mother tongue)',
-				'English (Non Native)',
-				'Hindi (Conversational)',
-			],
+			subSkills: ['Telugu (Mother tongue)', 'English (Non Native)'],
 		},
 	],
 	projects: [
@@ -84,7 +76,7 @@ const Details = {
 			description:
 				'A Piano app which plays notes using the keyboard keys (16hz to 7600hz)',
 			sourceCodeUrl: 'https://github.com/NandanGit/piano',
-			appUrl: 'https://piano.nandanreddy.tech/',
+			appUrl: 'https://piano.nandan.one/',
 		},
 		{
 			title: 'Recipe Now',
@@ -94,12 +86,12 @@ const Details = {
 			sourceCodeUrl: 'https://github.com/NandanGit/recipe-now',
 			appUrl: 'https://nandangit.github.io/recipe-now/',
 		},
-		{
-			title: 'Chatting App',
-			description:
-				'A FullStack Chat application which makes use of Node.js, Express.js, Websockets (socket.io), MongoDB with mongoose and React.js ',
-			sourceCodeUrl: 'https://github.com/NandanGit/chatterbox-v2',
-			appUrl: 'https://chatterbox.nandanreddy.tech',
-		},
+		// {
+		// 	title: 'Chatting App',
+		// 	description:
+		// 		'A FullStack Chat application which makes use of Node.js, Express.js, Websockets (socket.io), MongoDB with mongoose and React.js ',
+		// 	sourceCodeUrl: 'https://github.com/NandanGit/chatterbox-v2',
+		// 	appUrl: 'https://chatterbox.nandanreddy.tech',
+		// },
 	],
 };
