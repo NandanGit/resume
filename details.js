@@ -41,12 +41,14 @@ const Details = {
 			skillSet: 'Programming languages',
 			subSkills: ['Python', 'JavaScript'],
 		},
+		/*
 		{
 			skillSet: 'Computer science concepts',
 			subSkills: ['Data structures', 'Object Oriented Programming'],
 		},
+		*/
 		{
-			skillSet: 'Web technologies',
+			skillSet: 'Web Technologies',
 			subSkills: [
 				'HTML',
 				'CSS',
@@ -60,6 +62,10 @@ const Details = {
 		{
 			skillSet: 'Database',
 			subSkills: ['MongoDB', 'Mongoose'],
+		},
+		{
+			skillSet: 'Mobile Technologies',
+			subSkills: ['React Native'],
 		},
 		{
 			skillSet: 'Tools',
