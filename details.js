@@ -52,11 +52,13 @@ const Details = {
 			subSkills: [
 				'HTML',
 				'CSS',
-				'JavaScript',
+				'Tailwind CSS',
+				'SCSS',
+				'TypeScript',
 				'React.js',
 				'Node.js',
 				'Express.js',
-				'Socket.io (Basics)',
+				// 'Socket.io (Basics)',
 			],
 		},
 		{
@@ -69,7 +71,7 @@ const Details = {
 		},
 		{
 			skillSet: 'Tools',
-			subSkills: ['Git', 'GitHub', 'VS Code', 'Postman'],
+			subSkills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Rollup'],
 		},
 		{
 			skillSet: 'Natural Languages',
