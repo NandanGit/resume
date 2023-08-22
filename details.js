@@ -39,7 +39,7 @@ const Details = {
 	skills: [
 		{
 			skillSet: 'Programming languages',
-			subSkills: ['Python', 'JavaScript'],
+			subSkills: ['Python', 'TypeScript'],
 		},
 		/*
 		{
