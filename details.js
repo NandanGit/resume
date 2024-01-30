@@ -39,7 +39,7 @@ const Details = {
 	skills: [
 		{
 			skillSet: 'Programming languages',
-			subSkills: ['Python', 'TypeScript'],
+			subSkills: ['Python', 'TypeScript', 'Dart'],
 		},
 		/*
 		{
@@ -67,7 +67,7 @@ const Details = {
 		},
 		{
 			skillSet: 'Mobile Technologies',
-			subSkills: ['React Native'],
+			subSkills: ['React Native', 'Flutter'],
 		},
 		{
 			skillSet: 'Tools',
