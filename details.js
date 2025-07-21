@@ -8,7 +8,7 @@ const Details = {
 		{
 			title: 'Highest Qualification',
 			qualification: 'B.Tech',
-			score: 'CGPA: 7.89',
+			score: '',
 		},
 
 		{
